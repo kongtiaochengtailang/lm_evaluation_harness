@@ -1,3 +1,7 @@
 include: arc_easy.yaml
 task: arc_challenge
-dataset_name: ARC-Challenge
+dataset_kwargs:
+  data_files:
+    train: own_datasets/ai2_arc_dataset/ARC_Challenge/train-00000-of-00001.parquet
+    validation: own_datasets/ai2_arc_dataset/ARC_Challenge/validation-00000-of-00001.parquet
+    test: own_datasets/ai2_arc_dataset/ARC_Challenge/test-00000-of-00001.parquet

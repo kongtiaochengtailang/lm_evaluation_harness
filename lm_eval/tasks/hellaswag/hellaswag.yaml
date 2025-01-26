@@ -1,10 +1,14 @@
 tag:
   - multiple_choice
 task: hellaswag
-dataset_path: hellaswag
-dataset_name: null
+dataset_path: arrow
+dataset_kwargs:
+  data_files:
+    # train: hellaswag/train/data-00000-of-00001.arrow
+    validation: own_datasets/hellaswag_dataset/validation/data-00000-of-00001.arrow
+    # test: hellaswag/test/data-00000-of-00001.arrow
 output_type: multiple_choice
-training_split: train
+training_split: null
 validation_split: validation
 test_split: null
 process_docs: !function utils.process_docs
@@ -20,5 +24,6 @@ metric_list:
     higher_is_better: true
 metadata:
   version: 1.0
-dataset_kwargs:
-  trust_remote_code: true
+# dataset_kwargs:
+#   trust_remote_code: true
+

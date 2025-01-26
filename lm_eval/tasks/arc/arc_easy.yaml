@@ -1,8 +1,13 @@
 tag:
   - ai2_arc
 task: arc_easy
-dataset_path: allenai/ai2_arc
-dataset_name: ARC-Easy
+dataset_path: parquet
+dataset_kwargs:
+  # data_dir: ai2_arc_dataset/ARC-Easy/
+  data_files:
+    train: own_datasets/ai2_arc_dataset/ARC_Easy/train-00000-of-00001.parquet
+    validation: own_datasets/ai2_arc_dataset/ARC_Easy/validation-00000-of-00001.parquet
+    test: own_datasets/ai2_arc_dataset/ARC_Easy/test-00000-of-00001.parquet
 output_type: multiple_choice
 training_split: train
 validation_split: validation
